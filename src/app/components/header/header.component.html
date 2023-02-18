@@ -1,0 +1,54 @@
+<header class="header" id="header" [ngClass]="{ shadow: isActive }">
+  <div class="header__container container">
+    <div class="header__nav">
+      <!-- LOGO -->
+
+      <span class="header__logo image">
+        <img
+          src="../../../assets/images/icons/logo.png"
+          alt=""
+          class="header__logo--img"
+        />
+      </span>
+
+      <!-- END LOGO -->
+      <!-- LINKS -->
+
+      <div class="header__links" [ngClass]="{ open: isMenuOpen }">
+        <ul>
+          <li [ngClass]="{ active: activeItem === 0 }" (click)="activeItem = 0">
+            <a href="#home">home</a>
+          </li>
+          <li [ngClass]="{ active: activeItem === 1 }" (click)="activeItem = 1">
+            <a href="#services">services</a>
+          </li>
+          <li [ngClass]="{ active: activeItem === 2 }" (click)="activeItem = 2">
+            <a href="#portfolio">portfolio</a>
+          </li>
+          <li [ngClass]="{ active: activeItem === 3 }" (click)="activeItem = 3">
+            <a href="#about">about</a>
+          </li>
+          <li [ngClass]="{ active: activeItem === 4 }" (click)="activeItem = 4">
+            <a href="#blog">blog</a>
+          </li>
+          <li [ngClass]="{ active: activeItem === 5 }" (click)="activeItem = 5">
+            <a href="#contact">contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- END LINKS -->
+      <!-- HAMBURGER MENU -->
+
+      <div
+        class="hamburger-menu"
+        [ngClass]="{ open: isMenuOpen }"
+        (click)="toggleHamburgerMenu()"
+      >
+        <div class="bar"></div>
+      </div>
+
+      <!-- END HAMBURGER MENU -->
+    </div>
+  </div>
+</header>

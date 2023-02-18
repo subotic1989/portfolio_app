@@ -1,0 +1,189 @@
+.contact {
+  position: relative;
+  padding: 13.5rem 0 8.5rem;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    left: 0;
+  }
+
+  &:before {
+    top: 0;
+    height: 40%;
+    background: url("../../../assets/images/map/map1.png") center center / cover;
+    background-color: var(--light-three);
+  }
+
+  &:after {
+    top: 40%;
+    height: 60%;
+    background-color: var(--main-color);
+  }
+
+  &__container {
+    width: 90%;
+    border-radius: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    background-color: var(--light-one);
+    padding: 3rem;
+  }
+
+  &__touch {
+    &--title {
+      font-size: var(--font-size-3);
+      text-transform: capitalize;
+      width: fit-content;
+
+      &:after {
+        transform: translateX(0%);
+        left: 0%;
+        right: 0px !important;
+      }
+    }
+
+    &--text {
+      font-size: var(--font-size-subtitle);
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__me {
+    &--title {
+      text-transform: capitalize;
+      font-size: var(--font-size-3);
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &__shape {
+    width: 15rem;
+    position: absolute;
+    top: 61%;
+    left: 25%;
+    opacity: 0.2;
+  }
+}
+
+.icons {
+  &__container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  &__circle {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    position: relative;
+    background-color: var(--main-color);
+    margin-right: 1rem;
+  }
+
+  &__img {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+  }
+
+  .phone {
+    left: 19px;
+  }
+
+  &__data {
+    font-size: var(--font-size-5);
+  }
+}
+
+.form {
+  &__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__input {
+    width: 49%;
+    padding: 1.2rem 2.1rem;
+    margin: 0.6rem 0rem 0.6rem 0;
+    border: none;
+    outline: none;
+    background: #e8e8e8;
+    border-radius: 4rem;
+    font-size: var(--font-size-subtitle);
+    font-weight: 400;
+  }
+
+  &__textarea {
+    min-height: 120px;
+    resize: none;
+    border-radius: 2rem;
+    padding: 1.2rem 2.1rem;
+    margin: 0.6rem 0;
+    border: none;
+    outline: none;
+    background: #e8e8e8;
+    font-weight: 400;
+    font-size: var(--font-size-6);
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+
+.overlay {
+  .point {
+    width: 40px;
+    position: absolute;
+    top: 10%;
+    right: 20%;
+  }
+
+  .shape {
+    filter: brightness(0) invert(1);
+
+    &-1 {
+      right: 5%;
+      top: 65%;
+    }
+    &-2 {
+      right: 15%;
+      top: 45%;
+    }
+    &-3 {
+      right: 35%;
+      top: 85%;
+    }
+    &-4 {
+      right: 49%;
+      top: 89%;
+    }
+    &-5 {
+      right: 65%;
+      top: 93%;
+    }
+    &-6 {
+      right: 77%;
+      top: 80%;
+    }
+    &-7 {
+      right: 85%;
+      top: 55%;
+    }
+    &-8 {
+      right: 95%;
+      top: 75%;
+    }
+  }
+}

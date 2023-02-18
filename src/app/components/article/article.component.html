@@ -1,0 +1,37 @@
+<section class="article section" id="article" *ngIf="isOpen">
+  <div class="article__container container">
+    <!-- HEADER -->
+
+    <div class="article__header header">
+      <h2
+        class="article__header--title title"
+        [attr.data-title]="article.subtitle"
+      >
+        {{ article.title }}
+      </h2>
+      <div class="article__header--date subtitle">{{ article.date }}</div>
+    </div>
+
+    <!-- END HEADER -->
+    <!-- CONTENT -->
+
+    <div class="article__body">
+      <div [innerHTML]="article.text.replace('/\n/g', '<br>')"></div>
+    </div>
+
+    <!-- END CONTENT -->
+  </div>
+  <!-- CLOSE BTN -->
+  <a>
+    <img
+      src="../../../assets/images/icons/close.svg"
+      alt="#"
+      class="article__close"
+      routerLink="/"
+      (click)="onClose()"
+    />
+  </a>
+
+  <!-- END CLOSE BTN -->
+</section>
+<b></b>

@@ -1,0 +1,68 @@
+.portfolio {
+  background-color: var(--main-color);
+  &__header {
+    &--title {
+      color: var(--light-one);
+
+      &:before {
+        color: var(--light-one);
+      }
+
+      &:after {
+        background-color: var(--light-one);
+      }
+    }
+
+    &--subtitle {
+      color: var(--light-one);
+    }
+  }
+
+  &__projects {
+    &--container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-bottom: 2rem;
+      align-items: center;
+    }
+
+    &--video {
+      width: 100%;
+    }
+
+    &--title {
+      font-size: var(--font-size-3);
+      text-transform: capitalize;
+      margin-bottom: 1rem;
+      color: var(--light-one);
+    }
+
+    &--text {
+      color: var(--light-two);
+      text-align: justify;
+    }
+
+    &--link {
+      font-weight: 800;
+      text-decoration: underline;
+      background: linear-gradient(
+        to right,
+        blue,
+        blue 50%,
+        #ffffff 50%,
+        #ffffff
+      );
+      background-size: 200% 100%;
+      background-position: right bottom;
+      background-clip: text;
+      color: transparent;
+      transition: background-position 0.3s ease;
+
+      &:hover {
+        transition: 0.3s;
+        background-position: left bottom;
+      }
+    }
+  }
+}

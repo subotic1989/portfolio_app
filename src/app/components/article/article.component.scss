@@ -1,0 +1,33 @@
+.article {
+  background-color: var(--light-three);
+  min-height: 100vh;
+  position: relative;
+
+  &__body {
+    text-align: justify;
+
+    &--text {
+      display: flex;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 40px;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-5px);
+      transition: 0.3s;
+    }
+  }
+
+  .title {
+    &:after {
+      bottom: -0.5rem !important;
+    }
+  }
+}
